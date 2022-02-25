@@ -1,14 +1,14 @@
 import React from "react";
 
 
-function Task({task, index, completeTask, removeTask }){
+function Task({task, id, completeTask, removeTask }){
 
     return(
         <div className="tasks" style = {{textDecoration: task.isCompleted ? "line-through" : ""}}>
             {task.text}
             <div>
-                <button onClick = {() => completeTask(index)}>complete</button>
-                <button onClick = {() => removeTask(index)}>x</button>
+                <button onClick = {() => completeTask(id)}>complete</button>
+                <button onClick = {() => removeTask(id)}>x</button>
             </div>
         </div>
     )

@@ -14,18 +14,19 @@ function MainContainer(){
         )
     )}, [])
 
-    const completeTask = index => {
+    const completeTask = id => {
         const newTasks = [...tasks];
-        newTasks[index].isCompleted = true;
+        newTasks[id].isCompleted = true;
         setTasks(newTasks);
     };
 
-    const removeTask = index => {
+    const removeTask = id => {
         const newTasks = [...tasks];
-        newTasks.splice(index, 1);
+        newTasks.splice(id, 1);
         setTasks(newTasks);
         alert("Task deleted!")
       };
+      
     return (
 
         <div className="container">
